@@ -1,36 +1,32 @@
+import data.data_saver
 from Back_end.distributors import Distributors
 from Back_end.Products import Products
 from Back_end.address import Address
 from Back_end.identity_information import IdentityInformation
 from Back_end.contact_information import ContactInformation
+#from Back_end.referral_link import ReferralLink
+from Back_end.sales import Sales
+from data import data_saver
+from Front_end.products_page import products_page, refresh_canvas
+from Front_end.home_page import home_page
+import tkinter
+import datetime
 
 
-address1 = Address("Formal", "st.johns 52")
-identity_info1 = IdentityInformation(
-    type="Passport",
-    date_of_issue="2022-01-01",
-    date_of_expiry="2032-01-01",
-    personal_number="1234567890",
-    serie="AB12345",
-    card_number="7890123456",
-    issuing_authority="Department of State"
-)
-contact_info_telephone = ContactInformation(
-    type="Telephone#",
-    contact_information="1234567890"
-)
+data_saver.DataSaver.transfer_products_from_json("data/products.json")
+print(data_saver.DataSaver.products_runtime_data)
 
-#print(f"address1 type - {type(address1)}")
-# Create some distributors
-distributor1 = Distributors("John", "Doe", "1990-01-01", "Male", "image1.jpg", contact_info_telephone, identity_info1, address1)
-#distributor2 = Distributors("Jane", "Smith", "1985-05-15", "Female", "image2.jpg", "098-765-4321", "ID54321", "456 Elm St")
-
-bananas = Products("21T@FSAA", "Banana", 3)
+data_saver.DataSaver.transfer_sales_from_json("data/sales.json")
+print(data_saver.DataSaver.sales_runtime_data)
 
 
+for key, value in data_saver.DataSaver.products_runtime_data.items():
+    data_saver.DataSaver.products_runtime_data[key] = data.data_saver.DataSaver.create_product_from_product_runtime_data(key, data_saver.DataSaver.products_runtime_data)
+print(data_saver.DataSaver.products_runtime_data)
 
-print(distributor1)  # Output includes Distributor Code
-#print(distributor2)  # Output includes Distributor Code
-#print(f"Total distributors: {Distributors.total_distributors}")  # Output should reflect the total distributors created
-#print(bananas)
+data_saver.DataSaver.transfer_data_from_json("data/distributors.json")
+print(data_saver.DataSaver.runtime_data)
 
+print(data_saver.DataSaver.products_runtime_data)
+#products_page(data_saver.DataSaver.products_runtime_data)
+home_page()

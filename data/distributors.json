@@ -1,0 +1,54 @@
+{
+    "000001": {
+        "name": "John",
+        "last_name": "Doe",
+        "gender": "Male",
+        "image": "image1.jpg",
+        "date_of_birth": "1990-01-01",
+        "contact_information": {
+            "type": "Telephone#",
+            "contact_information": "1234567890"
+        },
+        "identity_information": {
+            "Type": "ID Card",
+            "Date of Issue": "2010-01-01",
+            "Date of Expiry": "2025-01-01",
+            "Personal Number": "123456789",
+            "Serie": null,
+            "Card Number": null,
+            "Issuing Authority": null
+        },
+        "address": {
+            "type": "Actual",
+            "address": "123 Main St"
+        },
+        "referrer": null,
+        "referral": []
+    },
+    "00002": {
+        "name": "Jane",
+        "last_name": "Smith",
+        "gender": "Female",
+        "image": "E:/Python/Projects/Network_marketing_contol_system/data/Images/Face2.jpeg",
+        "date_of_birth": "1985-05-15",
+        "contact_information": {
+            "type": "E-mail",
+            "contact_information": "janesmith@example.com"
+        },
+        "identity_information": {
+            "Type": "Passport",
+            "Date of Issue": "2015-06-20",
+            "Date of Expiry": "2025-06-20",
+            "Personal Number": "987654321",
+            "Serie": "B1234567",
+            "Card Number": "P987654321",
+            "Issuing Authority": "Government Authority"
+        },
+        "address": {
+            "type": "Formal",
+            "address": "456 Elm St"
+        },
+        "referrer": null,
+        "referral": []
+    }
+}

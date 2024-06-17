@@ -4,8 +4,9 @@ from Back_end.contact_information import ContactInformation
 
 class Distributors:
     total_distributors = 0
+    referred_people = set()
 
-    def __init__(self, name, last_name, date_of_birth, gender, image, contact_information, identity_information, address):
+    def __init__(self, name, last_name, date_of_birth, gender, image, contact_information, identity_information, address, distributor_code=None, referral=[], referrer = None):
         Distributors.total_distributors += 1
         self._name = None
         self.name = name
@@ -21,17 +22,27 @@ class Distributors:
         self.identity_information = identity_information
         self._address = None
         self.address = address
-        self._distributor_code = self.generate_distributor_code()
+        self._distributor_code = None
+        self.distributor_code = distributor_code
+        self._referral = []
+        self.referral = referral
+        self.referrer = None
+        self.referrer = referrer
+
 
 
     @property
     def distributor_code(self):
         return self._distributor_code
 
-    def generate_distributor_code(self):
+    @distributor_code.setter
+    def distributor_code(self, value):
         global total_distributors
-        unic_code = f"000000000{Distributors.total_distributors}"
-        return unic_code[-6:]
+        if value == None:
+            unic_code = f"000000000{Distributors.total_distributors}"
+            self._distributor_code = unic_code[-6:]
+        else:
+            self._distributor_code = value
 
     @property
     def name(self):
@@ -116,6 +127,54 @@ class Distributors:
         else:
             raise TypeError("address type must be Address object!")
 
+    @property
+    def referrer(self):
+        return self._referrer
+
+    @referrer.setter
+    def referrer(self, value):
+        if value == None:
+            self._referrer = value
+        else:
+            if len(value.referrals) >= 3:
+                raise ValueError("This referrer cannot have more referrals!")
+            else:
+                value.referrals.add_referral(self)
+
+    @property
+    def referral(self):
+        return self._referral
+
+    @referral.setter
+    def referral(self, value):
+        if isinstance(value, list):
+            if len(value) < 4:
+                self._referral = value
+            else:
+                raise ValueError("A Distributor can have up to 3 referrals!")
+        elif value == []:
+            self._referral = []
+        else:
+            raise TypeError("Refferal must be list type, up to 3 elements!")
+
+    def add_referral(self, distributor):
+        referrals = self.referral
+        if distributor in referred_people:
+            raise ValueError("This person is already referred by another distributor!")
+        else:
+            if isinstance(distributor, Distributors) and len(referrals) <= 2:
+                referrals.append(distributor.distributor_code)
+                referred_people.add(distributor)
+            else:
+                raise ValueError("Person you are trying to add to the referral link is not an distributor or too many distributors in a link!") #can come up with better error text
+
+    def remove_referral(self, distributor):
+        if not isinstance(distributor, Distributors):
+            raise TypeError("object you are trying to remove is not even distributor!")
+        if distributor in self.referral:
+            self.referral.remove(distributor)
+        else:
+            raise ValueError("Distributor you are trying to remove is not part of the referral link")
 
     def full_name(self):
         return f"{self.name} {self.last_name}"
@@ -137,3 +196,8 @@ class Distributors:
                 f"{self.identity_details()}\n"
                 f"{str(self.address)}\n"
                 f"{self.distributor_code}")
+
+    def __repr__(self):
+        return (
+            f"{self.name} {self.last_name}"
+        )

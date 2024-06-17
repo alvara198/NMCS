@@ -1,0 +1,113 @@
+{
+    "21T@FSAB": {
+        "product_name": "Twinkles",
+        "product_unit_price": 1.5
+    },
+    "21T@FSAA": {
+        "product_name": "Banana",
+        "product_unit_price": 0.5
+    },
+    "5521MDAW": {
+        "product_name": "Strawberry",
+        "product_unit_price": 2
+    },
+    "R7K3#Q9Z": {
+        "product_name": "Plums",
+        "product_unit_price": 1
+    },
+    "H9$M4!P6": {
+        "product_name": "Ketchup",
+        "product_unit_price": 4
+    },
+    "S1@Y6#G3": {
+        "product_name": "Mustard",
+        "product_unit_price": 3
+    },
+    "D8!N2@L7": {
+        "product_name": "Bread",
+        "product_unit_price": 1
+    },
+    "T3$R9@Q5": {
+        "product_name": "Cheese",
+        "product_unit_price": 9
+    },
+    "E9!P6@T3": {
+        "product_name": "Juice",
+        "product_unit_price": 4
+    },
+    "K1@S9#D2": {
+        "product_name": "Milk",
+        "product_unit_price": 4
+    },
+    "P5@U1!N7": {
+        "product_name": "Eggs",
+        "product_unit_price": 0.5
+    },
+    "Y4@V7#N2": {
+        "product_name": "Ice Cream",
+        "product_unit_price": 1.5
+    },
+    "B9!M3$H8": {
+        "product_name": "Fish",
+        "product_unit_price": 20
+    },
+    "P1#K6@R5": {
+        "product_name": "Beef",
+        "product_unit_price": 24
+    },
+    "F8@Q2!L7": {
+        "product_name": "Cookies",
+        "product_unit_price": 5
+    },
+    "W3$L9#T6": {
+        "product_name": "Churchkhela",
+        "product_unit_price": 20
+    },
+    "QWERT12!": {
+        "product_name": "Almonds",
+        "product_unit_price": 7.0
+    },
+    "JHGFD441": {
+        "product_name": "Peanuts",
+        "product_unit_price": 7.5
+    },
+    "AVOID!!!": {
+        "product_name": "Beer",
+        "product_unit_price": 3.0
+    }
+}
+{
+    "000001": {
+        "name": "John",
+        "last_name": "Doe",
+        "gender": "Male",
+        "image": "image1.jpg",
+        "date_of_birth": "1990-01-01",
+        "contact_information": {
+            "type": "Telephone#",
+            "contact_information": "1234567890"
+        },
+        "identity_information": {
+            "Type": "ID Card",
+            "Date of Issue": "2010-01-01",
+            "Date of Expiry": "2025-01-01",
+            "Personal Number": "123456789",
+            "Serie": null,
+            "Card Number": null,
+            "Issuing Authority": null
+        },
+        "address": {
+            "type": "Actual",
+            "address": "123 Main St"
+        },
+        "referrer": null,
+        "referral": []
+    }
+}
+{
+    "1718310789": {
+        "distributor": "000001",
+        "product": "21T@FSAA",
+        "units_sold": 3
+    }
+}

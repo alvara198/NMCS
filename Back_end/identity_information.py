@@ -52,9 +52,12 @@ class IdentityInformation:
 
     @serie.setter
     def serie(self, value):
-        if len(value) > 10:
-            raise ValueError("serie must be no longer than 10!")
-        self._serie = value
+        if value == None:
+            self._serie = value
+        else:
+            if len(value) > 10:
+                raise ValueError("serie must be no longer than 10!")
+            self._serie = value
 
     @property
     def card_number(self):
@@ -70,9 +73,12 @@ class IdentityInformation:
 
     @issuing_authority.setter
     def issuing_authority(self, value):
-        if len(value) > 100:
-            raise ValueError("Name of the issuing authority is too big(max 100 characters)")
-        self._issuing_authority = value
+        if value == None:
+            self._issuing_authority = value
+        else:
+            if len(value) > 100:
+                raise ValueError("Name of the issuing authority is too big(max 100 characters)")
+            self._issuing_authority = value
 
     def __str__(self):
         return (f"\n"

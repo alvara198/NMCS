@@ -14,7 +14,7 @@ class ContactInformation:
         if value == "Telephone#" or value == "E-mail":
             self._type = value
         else:
-            raise ValueError("Type of contact information must be either phone number or E=mail!")
+            raise ValueError("Type of contact information must be either phone number or E-mail!")
 
     @property
     def contact_information(self):
