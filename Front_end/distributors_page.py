@@ -3,6 +3,7 @@ from PIL import ImageTk, Image
 
 import data.data_saver
 from Front_end.home_page import home_page
+from Front_end.new_distributor_page import new_distributor_page
 
 
 def show_identity_information(id_info):
@@ -32,38 +33,52 @@ def show_identity_information(id_info):
     root.mainloop()
 
 
-def distributors_page():
-    droebiti = {'000001': {'name': 'John', 'last_name': 'Doe', 'gender': 'Male', 'image': 'E:/Python/Projects/Network_marketing_contol_system/data/Images/Face.jpeg', 'date_of_birth': '1990-01-01', 'contact_information': {'type': 'Telephone#', 'contact_information': '1234567890'}, 'identity_information': {'Type': 'ID Card', 'Date of Issue': '2010-01-01', 'Date of Expiry': '2025-01-01', 'Personal Number': '123456789', 'Serie': None, 'Card Number': None, 'Issuing Authority': None}, 'address': {'type': 'Actual', 'address': '123 Main St'}, 'referrer': None, 'referral': []},
-    '000002': {
-    'name': 'Jane',
-    'last_name': 'Smith',
-    'gender': 'Female',
-    'image': 'E:/Python/Projects/Network_marketing_contol_system/data/Images/Face2.jpeg',
-    'date_of_birth': '1985-05-15',
-    'contact_information': {
-        'type': 'E-mail',
-        'contact_information': 'janesmith@example.com'
-    },
-    'identity_information': {
-        'Type': 'Passport',
-        'Date of Issue': '2015-06-20',
-        'Date of Expiry': '2025-06-20',
-        'Personal Number': '987654321',
-        'Serie': 'B1234567',
-        'Card Number': 'P987654321',
-        'Issuing Authority': 'Government Authority'
-    },
-    'address': {
-        'type': 'Formal',
-        'address': '456 Elm St'
-    },
-    'referrer': None,
-    'referral': []
-}}
+def refresh_canvas(distributors_data, distributors_frame, canvas):
+    distributors_data=distributors_data
+    for widget in distributors_frame.winfo_children():
+        widget.destroy()
 
-    for code, distributor in droebiti.items():
-        distributor_ = data.data_saver.DataSaver.create_distributor_from_runtime_data(code, distributor)
-        droebiti[code] = distributor_
+    i = 0
+    for code, distributor_ in distributors_data.items():
+        # image_path=distributor_.image
+        # image = Image.open(image_path)
+        # resized_image = image.resize((110, 120))
+        # distributor_image = ImageTk.PhotoImage(resized_image)
+        # images.append(distributor_image)
+
+        # image_widget = Label(distributor_frame, image=distributor_image)
+        # image_widget.image = distributor_image
+        name = Label(distributors_frame, text=f"Name: {distributor_.name}", padx=1, anchor="w", font=("Arial", 12))
+        last_name = Label(distributors_frame, text=f"Last Name: {distributor_.last_name}", padx=1, anchor="w", font=("Arial", 12))
+        gender = Label(distributors_frame, text=f"Gender: {distributor_.gender}", padx=1, anchor="s", font=("Arial", 12))
+        date_of_birth = Label(distributors_frame, text=f"Date of Birth: {distributor_.date_of_birth}", padx=1, anchor="n", font=("Arial", 12))
+        contact_information = Label(distributors_frame, text=f"Contact information: {str(distributor_.contact_information)}", padx=1, anchor="n", font=("Arial", 12))
+        address = Label(distributors_frame, text=f"Address: {distributor_.address}", padx=1, anchor="n", font=("Arial", 12))
+        referrer = Label(distributors_frame, text=f"Referrer: {distributor_.referrer}", padx=1, anchor="e", font=("Arial", 12))
+        referral = Label(distributors_frame, text=f"Referral: {distributor_.referral}", padx=1, anchor="n", font=("Arial", 12))
+
+        identity_information = Button(distributors_frame, text="Detailed ID information", padx=1, command=lambda d=distributor_: show_identity_information(d.identity_information))
+
+        name.grid(row=i, column=1, padx=(10, 50), pady=3, sticky="nw")
+        last_name.grid(row=i + 1, column=1, padx=(10, 50), pady=3, sticky="w")
+        gender.grid(row=i + 2, column=1, padx=(10, 50), pady=3, sticky="sw")
+        # image_widget.grid(row=i, column=0, padx=10, pady=5, sticky="nswe", rowspan=3)
+        date_of_birth.grid(row=i, column=2, padx=10, pady=5, sticky="nw")
+        contact_information.grid(row=i + 1, column=2, padx=10, pady=5, sticky="w")
+        address.grid(row=i + 2, column=2, padx=10, pady=5, sticky="sw")
+        referrer.grid(row=i + 1, column=3, padx=10, pady=5, sticky="w")
+        referral.grid(row=i + 2, column=3, padx=10, pady=5, sticky="sw")
+        identity_information.grid(row=i, column=3, padx=10, pady=5, sticky="e")
+
+        i += 3
+
+    # Update the scroll region of the canvas
+    distributors_frame.update_idletasks()
+    canvas.configure(scrollregion=canvas.bbox("all"))
+
+
+def distributors_page(distributors):
+    distributors_data = distributors
 
     root = Tk()
     root.title("Distributos Page")
@@ -79,19 +94,19 @@ def distributors_page():
     distributor_frame = Frame(canvas)
     canvas.create_window((0, 0), window=distributor_frame, anchor='center')
 
-    #images = []
+    images = []
 
 
     i = 0
-    for code, distributor_ in droebiti.items():
-        #image_path=distributor_.image
-        #image = Image.open(image_path)
-        #resized_image = image.resize((110, 120))
-        #distributor_image = ImageTk.PhotoImage(resized_image)
-        #images.append(distributor_image)
+    for code, distributor_ in distributors_data.items():
+        # image_path=distributor_.image
+        # image = Image.open(image_path)
+        # resized_image = image.resize((110, 120))
+        # distributor_image = ImageTk.PhotoImage(resized_image)
+        # images.append(distributor_image)
 
-        #image_widget = Label(distributor_frame, image=distributor_image)
-        #image_widget.image = distributor_image
+        # image_widget = Label(distributor_frame, image=distributor_image)
+        # image_widget.image = distributor_image
         name = Label(distributor_frame, text=f"Name: {distributor_.name}", padx=1, anchor="w", font=("Arial", 12))
         last_name = Label(distributor_frame, text=f"Last Name: {distributor_.last_name}", padx=1, anchor="w", font=("Arial", 12))
         gender = Label(distributor_frame, text=f"Gender: {distributor_.gender}", padx=1, anchor="s", font=("Arial", 12))
@@ -107,7 +122,7 @@ def distributors_page():
         name.grid(row=i, column=1, padx=(10, 50), pady=3, sticky="nw")
         last_name.grid(row=i+1, column=1, padx=(10, 50), pady=3, sticky="w")
         gender.grid(row=i+2, column=1, padx=(10, 50), pady=3, sticky="sw")
-        #image_widget.grid(row=i, column=0, padx=10, pady=5, sticky="nswe", rowspan=3)
+        # image_widget.grid(row=i, column=0, padx=10, pady=5, sticky="nswe", rowspan=3)
         date_of_birth.grid(row=i, column=2, padx=10, pady=5, sticky="nw")
         contact_information.grid(row=i+1, column=2, padx=10, pady=5, sticky="w")
         address.grid(row=i+2, column=2, padx=10, pady=5, sticky="sw")
@@ -130,8 +145,8 @@ def distributors_page():
 
     # Buttons
     back_to_home_page = Button(root, text="<--- Home page", width=20, pady=10, command=home_page)
-    add_distributor_button = Button(root, text="New Distributor!", width=20, padx=40, pady=10)
-    refresh_list_button = Button(root, text="Refresh List!", width=20, padx=40, pady=10)
+    add_distributor_button = Button(root, text="New Distributor!", width=20, padx=40, pady=10, command=new_distributor_page)
+    refresh_list_button = Button(root, text="Refresh List!", width=20, padx=40, pady=10, command=lambda:refresh_canvas(distributors_data=data.data_saver.DataSaver.runtime_data, distributors_frame=distributor_frame, canvas=canvas))
 
     # Grid configuration
     root.grid_columnconfigure(0, weight=0)

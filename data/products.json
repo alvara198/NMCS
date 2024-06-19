@@ -126,5 +126,9 @@
     "MMM#2551": {
         "product_name": "Pickles",
         "product_unit_price": 7.0
+    },
+    "PPLWADSR": {
+        "product_name": "Peaches",
+        "product_unit_price": 3.0
     }
 }

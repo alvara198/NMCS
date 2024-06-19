@@ -6,10 +6,16 @@
   <component name="ChangeListManager">
     <list default="true" id="c679ceaa-7301-4529-919a-258c25df250d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Back_end/contact_information.py" beforeDir="false" afterPath="$PROJECT_DIR$/Back_end/contact_information.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Back_end/distributors.py" beforeDir="false" afterPath="$PROJECT_DIR$/Back_end/distributors.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Back_end/identity_information.py" beforeDir="false" afterPath="$PROJECT_DIR$/Back_end/identity_information.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Back_end/refferal_link.py" beforeDir="false" afterPath="$PROJECT_DIR$/Back_end/referral_link.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Back_end/sales.py" beforeDir="false" afterPath="$PROJECT_DIR$/Back_end/sales.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front_end/distributors_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/Front_end/distributors_page.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front_end/home_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/Front_end/home_page.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front_end/new_distributor_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/Front_end/new_distributor_page.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/data_saver.py" beforeDir="false" afterPath="$PROJECT_DIR$/data/data_saver.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/dazgveva.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/dazgveva.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/distributors.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/distributors.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/products.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/products.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/sales.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/sales.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -51,6 +57,7 @@
   &quot;keyToString&quot;: {
     &quot;Python.Test.executor&quot;: &quot;Run&quot;,
     &quot;Python.address.executor&quot;: &quot;Run&quot;,
+    &quot;Python.bonus_page.executor&quot;: &quot;Run&quot;,
     &quot;Python.contact_information.executor&quot;: &quot;Run&quot;,
     &quot;Python.data_saver.executor&quot;: &quot;Run&quot;,
     &quot;Python.distributors.executor&quot;: &quot;Run&quot;,
@@ -58,10 +65,13 @@
     &quot;Python.home_page.executor&quot;: &quot;Run&quot;,
     &quot;Python.identity_information.executor&quot;: &quot;Run&quot;,
     &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.new_distributor_page.executor&quot;: &quot;Run&quot;,
     &quot;Python.new_product_page.executor&quot;: &quot;Run&quot;,
+    &quot;Python.new_sale_page.executor&quot;: &quot;Run&quot;,
     &quot;Python.products_page (1).executor&quot;: &quot;Run&quot;,
     &quot;Python.products_page.executor&quot;: &quot;Run&quot;,
     &quot;Python.referral_link.executor&quot;: &quot;Run&quot;,
+    &quot;Python.sales_page.executor&quot;: &quot;Run&quot;,
     &quot;Python.test.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
@@ -81,6 +91,29 @@
     </key>
   </component>
   <component name="RunManager" selected="Python.main">
+    <configuration name="bonus_page" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Network_marketing_contol_system" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Front_end" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Front_end/bonus_page.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="distributors_page" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Network_marketing_contol_system" />
       <option name="ENV_FILES" value="" />
@@ -96,29 +129,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Front_end/distributors_page.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="home_page" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="Network_marketing_contol_system" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Front_end" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Front_end/home_page.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -150,7 +160,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="new_product_page" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="new_distributor_page" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Network_marketing_contol_system" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -164,7 +174,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Front_end/new_product_page.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Front_end/new_distributor_page.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -173,30 +183,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="products_page (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="Network_marketing_contol_system" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/products_page.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="products_page" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="new_sale_page" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Network_marketing_contol_system" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -210,7 +197,30 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Front_end/products_page.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Front_end/new_sale_page.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Network_marketing_contol_system" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Front_end" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Front_end/test.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -221,11 +231,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.bonus_page" />
+        <item itemvalue="Python.new_sale_page" />
+        <item itemvalue="Python.new_distributor_page" />
         <item itemvalue="Python.distributors_page" />
-        <item itemvalue="Python.home_page" />
-        <item itemvalue="Python.products_page" />
-        <item itemvalue="Python.new_product_page" />
-        <item itemvalue="Python.products_page (1)" />
+        <item itemvalue="Python.test" />
       </list>
     </recent_temporary>
   </component>
@@ -257,7 +267,10 @@
       <workItem from="1718460696836" duration="17074000" />
       <workItem from="1718551173032" duration="19353000" />
       <workItem from="1718574338205" duration="89000" />
-      <workItem from="1718639683933" duration="13318000" />
+      <workItem from="1718639683933" duration="15906000" />
+      <workItem from="1718735062361" duration="11103000" />
+      <workItem from="1718747387120" duration="42000" />
+      <workItem from="1718826504441" duration="10347000" />
     </task>
     <servers />
   </component>
@@ -279,16 +292,20 @@
     <SUITE FILE_PATH="coverage/Network_marketing_contol_system$data_saver.coverage" NAME="data_saver Coverage Results" MODIFIED="1718300633581" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/data" />
     <SUITE FILE_PATH="coverage/Network_marketing_contol_system$referral_link.coverage" NAME="referral_link Coverage Results" MODIFIED="1718299323148" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Back_end" />
     <SUITE FILE_PATH="coverage/Network_marketing_contol_system$address.coverage" NAME="address Coverage Results" MODIFIED="1717619674503" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Back_end" />
+    <SUITE FILE_PATH="coverage/Network_marketing_contol_system$bonus_page.coverage" NAME="bonus_page Coverage Results" MODIFIED="1718836479158" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Front_end" />
     <SUITE FILE_PATH="coverage/Network_marketing_contol_system$new_product_page.coverage" NAME="new_product_page Coverage Results" MODIFIED="1718557434154" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Front_end" />
-    <SUITE FILE_PATH="coverage/Network_marketing_contol_system$distributors.coverage" NAME="distributors Coverage Results" MODIFIED="1717621685943" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Back_end" />
+    <SUITE FILE_PATH="coverage/Network_marketing_contol_system$new_distributor_page.coverage" NAME="new_distributor_page Coverage Results" MODIFIED="1718830502578" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Front_end" />
+    <SUITE FILE_PATH="coverage/Network_marketing_contol_system$distributors.coverage" NAME="distributors Coverage Results" MODIFIED="1718740068422" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Back_end" />
     <SUITE FILE_PATH="coverage/Network_marketing_contol_system$contact_information.coverage" NAME="contact_information Coverage Results" MODIFIED="1717618527878" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Back_end" />
     <SUITE FILE_PATH="coverage/Network_marketing_contol_system$Test.coverage" NAME="Test Coverage Results" MODIFIED="1718299299503" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Back_end" />
-    <SUITE FILE_PATH="coverage/Network_marketing_contol_system$test.coverage" NAME="test Coverage Results" MODIFIED="1718478074019" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Front_end" />
-    <SUITE FILE_PATH="coverage/Network_marketing_contol_system$distributors_page.coverage" NAME="distributors_page Coverage Results" MODIFIED="1718653188613" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Front_end" />
+    <SUITE FILE_PATH="coverage/Network_marketing_contol_system$test.coverage" NAME="test Coverage Results" MODIFIED="1718743620288" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Front_end" />
+    <SUITE FILE_PATH="coverage/Network_marketing_contol_system$distributors_page.coverage" NAME="distributors_page Coverage Results" MODIFIED="1718746296657" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Front_end" />
+    <SUITE FILE_PATH="coverage/Network_marketing_contol_system$new_sale_page.coverage" NAME="new_sale_page Coverage Results" MODIFIED="1718832821115" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Front_end" />
     <SUITE FILE_PATH="coverage/Network_marketing_contol_system$products_page.coverage" NAME="products_page Coverage Results" MODIFIED="1718561833313" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Front_end" />
+    <SUITE FILE_PATH="coverage/Network_marketing_contol_system$sales_page.coverage" NAME="sales_page Coverage Results" MODIFIED="1718738557124" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Front_end" />
     <SUITE FILE_PATH="coverage/Network_marketing_contol_system$home_page.coverage" NAME="home_page Coverage Results" MODIFIED="1718652828094" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Front_end" />
     <SUITE FILE_PATH="coverage/Network_marketing_contol_system$identity_information.coverage" NAME="identity_information Coverage Results" MODIFIED="1717616828735" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Back_end" />
     <SUITE FILE_PATH="coverage/Network_marketing_contol_system$products_page__1_.coverage" NAME="products_page (1) Coverage Results" MODIFIED="1718486485239" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Network_marketing_contol_system$main.coverage" NAME="main Coverage Results" MODIFIED="1718653706952" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Network_marketing_contol_system$main.coverage" NAME="main Coverage Results" MODIFIED="1718836848262" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

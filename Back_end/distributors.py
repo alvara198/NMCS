@@ -4,7 +4,7 @@ from Back_end.contact_information import ContactInformation
 
 class Distributors:
     total_distributors = 0
-    referred_people = set()
+
 
     def __init__(self, name, last_name, date_of_birth, gender, image, contact_information, identity_information, address, distributor_code=None, referral=[], referrer = None):
         Distributors.total_distributors += 1
@@ -159,12 +159,12 @@ class Distributors:
 
     def add_referral(self, distributor):
         referrals = self.referral
-        if distributor in referred_people:
+        distributor.referral = self
+        if distributor.referral != None:
             raise ValueError("This person is already referred by another distributor!")
         else:
             if isinstance(distributor, Distributors) and len(referrals) <= 2:
                 referrals.append(distributor.distributor_code)
-                referred_people.add(distributor)
             else:
                 raise ValueError("Person you are trying to add to the referral link is not an distributor or too many distributors in a link!") #can come up with better error text
 

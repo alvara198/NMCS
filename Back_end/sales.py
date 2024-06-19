@@ -4,7 +4,7 @@ import datetime
 import time
 
 class Sales:
-    def __init__(self, distributor, product, units_sold, unic_code = int(time.time())):
+    def __init__(self, distributor, product, units_sold, unic_code=int(time.time())):
         self._unic_code = unic_code
         self._distributor = None
         self.distributor = distributor

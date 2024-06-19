@@ -36,7 +36,7 @@ class DataSaver:
                                 "type": item_to_be_saved.address.type,
                                 "address": item_to_be_saved.address.address
                         },
-                        "referrer": item_to_be_saved.referrer.distributo_code,
+                        "referrer": None,
                         "referral": item_to_be_saved.referral
                 }
                 key_to_distributor = item_to_be_saved.distributor_code
@@ -44,36 +44,36 @@ class DataSaver:
 
         def create_distributor_from_runtime_data(distributor_code, data):
                 contact_info = ContactInformation(
-                        data['contact_information']['type'],
-                        data['contact_information']['contact_information']
+                        data[distributor_code]['contact_information']['type'],
+                        data[distributor_code]['contact_information']['contact_information']
                 )
 
                 identity_info = IdentityInformation(
-                        data['identity_information']['Type'],
-                        data['identity_information']['Date of Issue'],
-                        data['identity_information']['Date of Expiry'],
-                        data['identity_information']['Personal Number'],
-                        data['identity_information'].get('Serie'),
-                        data['identity_information'].get('Card Number'),
-                        data['identity_information'].get('Issuing Authority')
+                        data[distributor_code]['identity_information']['Type'],
+                        data[distributor_code]['identity_information']['Date of Issue'],
+                        data[distributor_code]['identity_information']['Date of Expiry'],
+                        data[distributor_code]['identity_information']['Personal Number'],
+                        data[distributor_code]['identity_information'].get('Serie'),
+                        data[distributor_code]['identity_information'].get('Card Number'),
+                        data[distributor_code]['identity_information'].get('Issuing Authority')
                 )
 
                 address = Address(
-                        data['address']['type'],
-                        data['address']['address']
+                        data[distributor_code]['address']['type'],
+                        data[distributor_code]['address']['address']
                 )
 
                 distributor = Distributors(
-                        name=data['name'],
-                        last_name=data['last_name'],
-                        gender=data['gender'],
-                        image=data['image'],
-                        date_of_birth=data['date_of_birth'],
+                        name=data[distributor_code]['name'],
+                        last_name=data[distributor_code]['last_name'],
+                        gender=data[distributor_code]['gender'],
+                        image=data[distributor_code]['image'],
+                        date_of_birth=data[distributor_code]['date_of_birth'],
                         contact_information=contact_info,
                         identity_information=identity_info,
                         address=address,
-                        referrer=data['referrer'],
-                        referral=data["referral"],
+                        referrer=data[distributor_code]['referrer'],
+                        referral=data[distributor_code]["referral"],
                         distributor_code=distributor_code
                 )
 
@@ -123,9 +123,11 @@ class DataSaver:
 
 
         def get_sale_from_sales_runtime_data(sale_code, data):
+                print(DataSaver.runtime_data.get(data[sale_code]["distributor"]))
+                type(DataSaver.runtime_data.get(data[sale_code]["distributor"]))
                 retrieved_sale = Sales(
-                        distributor=DataSaver.runtime_data[data[sale_code]["distributor"]],
-                        product=DataSaver.products_runtime_data[data[sale_code]["product"]],
+                        distributor=DataSaver.runtime_data.get(data[sale_code]["distributor"]),
+                        product=DataSaver.products_runtime_data.get(data[sale_code]["product"]),
                         units_sold=data[sale_code]["units_sold"],
                         unic_code= int(sale_code)
                 )

@@ -3,7 +3,7 @@
         "name": "John",
         "last_name": "Doe",
         "gender": "Male",
-        "image": "image1.jpg",
+        "image": "../data/Images/Face.jpeg",
         "date_of_birth": "1990-01-01",
         "contact_information": {
             "type": "Telephone#",
@@ -25,11 +25,11 @@
         "referrer": null,
         "referral": []
     },
-    "00002": {
+    "000002": {
         "name": "Jane",
         "last_name": "Smith",
         "gender": "Female",
-        "image": "E:/Python/Projects/Network_marketing_contol_system/data/Images/Face2.jpeg",
+        "image": "../data/Images/Face2.jpeg",
         "date_of_birth": "1985-05-15",
         "contact_information": {
             "type": "E-mail",
@@ -47,6 +47,58 @@
         "address": {
             "type": "Formal",
             "address": "456 Elm St"
+        },
+        "referrer": null,
+        "referral": []
+    },
+    "000003": {
+        "name": "Alice",
+        "last_name": "Smith",
+        "gender": "Female",
+        "image": "../data/Images/Capture13244.PNG",
+        "date_of_birth": "1985-05-24",
+        "contact_information": {
+            "type": "E-mail",
+            "contact_information": "Alice@sda.com"
+        },
+        "identity_information": {
+            "Type": "Passport",
+            "Date of Issue": "2015-01-01",
+            "Date of Expiry": "2025-01-01",
+            "Personal Number": "573465192",
+            "Serie": "AB447",
+            "Card Number": "573209",
+            "Issuing Authority": "Department of State"
+        },
+        "address": {
+            "type": "Formal",
+            "address": "321 Oak St, Washington"
+        },
+        "referrer": null,
+        "referral": []
+    },
+    "000004": {
+        "name": "Michael",
+        "last_name": "Johnson",
+        "gender": "Male",
+        "image": "../data/Images/Face3.jpeg",
+        "date_of_birth": "1988-01-10",
+        "contact_information": {
+            "type": "Telephone#",
+            "contact_information": "555678123"
+        },
+        "identity_information": {
+            "Type": "Passport",
+            "Date of Issue": "2018-09-20",
+            "Date of Expiry": "2028-09-20",
+            "Personal Number": "521214421",
+            "Serie": "EF421",
+            "Card Number": "512901",
+            "Issuing Authority": "DMV"
+        },
+        "address": {
+            "type": "Actual",
+            "address": "876 Pine St, Anytown"
         },
         "referrer": null,
         "referral": []
