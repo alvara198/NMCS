@@ -1,0 +1,48 @@
+Network Marketing Control System
+
+This desktop application is mock database. It stores information about distributors, products and sales made by distributor. 
+Application also has a feature to calculate bonus based on sales of a distributor. (Bonus would be 10% of sales made by distributor)
+
+At this moment some features might not be available. It is necesarry to run program from main file.
+App starts with main page which has 4 button that open windows:
+
+Distributor window:
+
+    Here is a list of distributors stored in program. In a table you see the information about distributor.
+    To add distributor you need to press "new distributor" button. At this moment it is crucial to input proper information to create new distributor.
+    Since refresh button is not working yet, after creating new distributor you need to rerun program to update the table.
+    unic code for distributor is generated automaticaly  
+
+Products page:
+
+    In this window you see all the products that is stored for this moment. 
+    You can add new product with "New Product" button. Unic code for product is NOT generated automaticaly so it must be entered manually.
+    After creating new product you can press refresh button to see updated table. (pressing refreshg button prematurely will cause an error)
+
+Sales page:
+
+    In the table here you can see all the sales made by distributors.
+    To add new sale a person must enter correct distributor code and product code, otherwise There will be an error.
+    Refresh button also does not work here at this moment.
+
+Bonus page:
+
+    To calculate bonus for distributor in a given timeperiod dates must be entered in the following format "%Y-%M-%D" (e.g. "2017-01-25").
+    Also Distributor code should be valid.
+    After entering information user must press Calculate bonus button and bonus of the distributor will be displayed on the screen.
+
+
+
+# Additional information
+
+This was my first project. Due to a lack of experience, time, and knowledge, the product may not meet high quality standards. 
+Working on this project was enjoyable and gave me insights into the process of developing desktop applications.
+This version is what I was able to produce within the deadline.
+
+Special thanks to my lecturers Mikheil and Tornike.
+I would also like to extend my thanks to TBC Academy for organizing this course.
+
+
+
+
+
