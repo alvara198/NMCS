@@ -6,15 +6,15 @@
   <component name="ChangeListManager">
     <list default="true" id="c679ceaa-7301-4529-919a-258c25df250d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Back_end/distributors.py" beforeDir="false" afterPath="$PROJECT_DIR$/Back_end/distributors.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Back_end/sales.py" beforeDir="false" afterPath="$PROJECT_DIR$/Back_end/sales.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front_end/bonus_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/Front_end/bonus_page.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Front_end/distributors_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/Front_end/distributors_page.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Front_end/home_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/Front_end/home_page.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Front_end/new_distributor_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/Front_end/new_distributor_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_saver.py" beforeDir="false" afterPath="$PROJECT_DIR$/data/data_saver.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front_end/new_sale_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/Front_end/new_sale_page.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front_end/products_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/Front_end/products_page.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front_end/sales_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/Front_end/sales_page.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/dazgveva.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/dazgveva.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/distributors.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/distributors.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/products.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/products.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/sales.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/sales.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
@@ -271,6 +271,7 @@
       <workItem from="1718735062361" duration="11103000" />
       <workItem from="1718747387120" duration="42000" />
       <workItem from="1718826504441" duration="10347000" />
+      <workItem from="1720109794626" duration="11371000" />
     </task>
     <servers />
   </component>
@@ -306,6 +307,6 @@
     <SUITE FILE_PATH="coverage/Network_marketing_contol_system$home_page.coverage" NAME="home_page Coverage Results" MODIFIED="1718652828094" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Front_end" />
     <SUITE FILE_PATH="coverage/Network_marketing_contol_system$identity_information.coverage" NAME="identity_information Coverage Results" MODIFIED="1717616828735" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Back_end" />
     <SUITE FILE_PATH="coverage/Network_marketing_contol_system$products_page__1_.coverage" NAME="products_page (1) Coverage Results" MODIFIED="1718486485239" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Network_marketing_contol_system$main.coverage" NAME="main Coverage Results" MODIFIED="1718836848262" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Network_marketing_contol_system$main.coverage" NAME="main Coverage Results" MODIFIED="1720121608861" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

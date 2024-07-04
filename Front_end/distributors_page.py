@@ -1,10 +1,7 @@
 from tkinter import *
-from PIL import ImageTk, Image
-
 import data.data_saver
 from Front_end.home_page import home_page
 from Front_end.new_distributor_page import new_distributor_page
-
 
 def show_identity_information(id_info):
     root = Tk()
@@ -34,9 +31,14 @@ def show_identity_information(id_info):
 
 
 def refresh_canvas(distributors_data, distributors_frame, canvas):
-    distributors_data=distributors_data
+    print(distributors_data)
     for widget in distributors_frame.winfo_children():
         widget.destroy()
+
+    for key, value in data.data_saver.DataSaver.runtime_data.items():
+        data.data_saver.DataSaver.runtime_data[key] = data.data_saver.DataSaver.create_distributor_from_runtime_data(key, data.data_saver.DataSaver.runtime_data)
+    distributors_data = data.data_saver.DataSaver.runtime_data
+    print(distributors_data)
 
     i = 0
     for code, distributor_ in distributors_data.items():
@@ -144,7 +146,7 @@ def distributors_page(distributors):
 
 
     # Buttons
-    back_to_home_page = Button(root, text="<--- Home page", width=20, pady=10, command=home_page)
+    back_to_home_page = Button(root, text="<--- Home page", width=20, pady=10, command=lambda: home_page(data.data_saver.DataSaver.runtime_data, data.data_saver.DataSaver.products_runtime_data, data.data_saver.DataSaver.sales_runtime_data))
     add_distributor_button = Button(root, text="New Distributor!", width=20, padx=40, pady=10, command=new_distributor_page)
     refresh_list_button = Button(root, text="Refresh List!", width=20, padx=40, pady=10, command=lambda:refresh_canvas(distributors_data=data.data_saver.DataSaver.runtime_data, distributors_frame=distributor_frame, canvas=canvas))
 

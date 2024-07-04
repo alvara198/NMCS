@@ -1,6 +1,6 @@
 from tkinter import *
 from datetime import datetime
-
+from Front_end.home_page import home_page
 import data.data_saver
 
 
@@ -35,7 +35,7 @@ def bonus_page(distributors, sales, products):
     distributor_label = Label(root, text="Distributor Code", padx=10, pady=10, anchor="center")
 
     # buttons
-    home_page_button = Button(root, text="<-- Home page", width=20, padx=10, pady=10)
+    home_page_button = Button(root, text="<-- Home page", width=20, padx=10, pady=10, command=lambda: home_page(data.data_saver.DataSaver.runtime_data, data.data_saver.DataSaver.products_runtime_data, data.data_saver.DataSaver.sales_runtime_data))
     calculate_bonus_button = Button(root, text="Calculate bonus:", width=30, padx=10, pady=10, command=lambda: calculate_bonus(root, start_date_entry, end_date_entry, distributor_code_entry))
 
     # entries

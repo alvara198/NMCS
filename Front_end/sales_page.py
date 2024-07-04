@@ -1,5 +1,36 @@
 from tkinter import *
 from datetime import datetime
+import data.data_saver
+from Front_end.home_page import home_page
+
+def refresh_canvas(memory, sales_frame, canvas):
+    print(memory)
+    for widget in sales_frame.winfo_children():
+        widget.destroy()
+
+
+    i = 0
+     #Add some products to the frame
+    for i, (key, value) in enumerate(memory.items()):
+        date_of_sale = Label(sales_frame, text=f"{datetime.fromtimestamp(int(key))}", padx=10, anchor='w',
+                             font=("Arial", 16))
+        distributor_of_sale = Label(sales_frame, text=value.distributor.full_name(), padx=10, font=("Arial", 16))
+        product_of_sale = Label(sales_frame, text=value.product, padx=10, font=("Arial", 16))
+        quantity_sold = Label(sales_frame, text=f"Unit price: {value.units_sold}", padx=10, font=("Arial", 16))
+        total_price = Label(sales_frame, text=f"Total value: {value._total_price}", padx=10, font=("Arial", 16),
+                            anchor="e")
+
+        date_of_sale.grid(row=i, column=0, pady=5, sticky="w")
+        distributor_of_sale.grid(row=i, column=1, pady=5, sticky="ew")
+        product_of_sale.grid(row=i, column=2, pady=5, sticky="ew")
+        quantity_sold.grid(row=i, column=3, pady=5, sticky="ew")
+        total_price.grid(row=i, column=4, pady=5, sticky="e")
+
+
+    # Update the scroll region of the canvas
+    sales_frame.update_idletasks()
+    canvas.configure(scrollregion=canvas.bbox("all"))
+
 
 def on_frame_configure(canvas):
     '''Reset the scroll region to encompass the inner frame'''
@@ -23,9 +54,9 @@ def sales_page(distributors, sales, products):
     sales_frame = Frame(canvas)
 
     sales_label = Label(root, text="Sales Made", anchor="w", font=("Arial", 32))
-    home_page_button = Button(root, text="<-- Home page", width=20, padx=10, pady=10)
+    home_page_button = Button(root, text="<-- Home page", width=20, padx=10, pady=10, command=lambda: home_page(data.data_saver.DataSaver.runtime_data, data.data_saver.DataSaver.products_runtime_data, data.data_saver.DataSaver.sales_runtime_data))
     new_sale_button = Button(root, text="New Sale", width=20, padx=10, pady=10, command=new_sale_page)
-    refresh_button = Button(root, text="Refresh", width=20, padx=10, pady=10)
+    refresh_button = Button(root, text="Refresh", width=20, padx=10, pady=10, command=lambda: refresh_canvas(sales, sales_frame, canvas=canvas))
 
     sales_label.grid(row=1, column=0, padx=10, pady=10, sticky="w")
     home_page_button.grid(row=0, column=0, padx=10, pady=10, sticky="nw")

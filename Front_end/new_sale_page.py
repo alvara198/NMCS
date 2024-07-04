@@ -10,16 +10,21 @@ import json
 def save_sale(distributor, product, units_sold):
     distributors = data.data_saver.DataSaver.runtime_data
     products = data.data_saver.DataSaver.products_runtime_data
-    sales = data.data_saver.DataSaver.sales_runtime_data
+    temp_sales = data.data_saver.DataSaver.sales_runtime_data
     distributor = distributors[distributor.get()]
     product = products[product.get()]
     units_sold = int(units_sold.get())
     new_sale = Sales(distributor=distributor, product=product, units_sold=units_sold)
-    sales[new_sale.unic_code]=new_sale
-    data.data_saver.DataSaver.transfer_data_from_json("data/sales.json")
-    for key, value in data.data_saver.DataSaver.sales_runtime_data.items():
+    temp_sales[new_sale.unic_code]=new_sale
+    data.data_saver.DataSaver.sales_runtime_data = {}
+    for key, value in temp_sales.items():
         data.data_saver.DataSaver.to_sales_runtime_data(value)
-    data.data_saver.DataSaver.transfer_data_to_json(data.data_saver.DataSaver.runtime_data, "data/sales.json")
+    data.data_saver.DataSaver.transfer_data_to_json(data.data_saver.DataSaver.sales_runtime_data, "data/sales.json")
+    print(data.data_saver.DataSaver.sales_runtime_data)
+
+    for key, value in data.data_saver.DataSaver.sales_runtime_data.items():
+        data.data_saver.DataSaver.sales_runtime_data[key] = data.data_saver.DataSaver.get_sale_from_sales_runtime_data(key, data.data_saver.DataSaver.sales_runtime_data)
+    print(data.data_saver.DataSaver.sales_runtime_data)
 
 
 def new_sale_page():

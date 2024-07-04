@@ -18,8 +18,8 @@ def save_user(name, last_name, gender, image, dob, contact_type, contact_info, i
     data.data_saver.DataSaver.transfer_data_from_json("data/distributors.json")
     data.data_saver.DataSaver.to_runtime_data(new_distributor)
     data.data_saver.DataSaver.transfer_data_to_json(data.data_saver.DataSaver.runtime_data, "data/distributors.json")
-    for key, value in data.data_saver.DataSaver.runtime_data.items():
-       data.data_saver.DataSaver.runtime_data[key] = data.data_saver.DataSaver.create_distributor_from_runtime_data(key, value)
+    # for key, value in data.data_saver.DataSaver.runtime_data.items():
+    #   data.data_saver.DataSaver.runtime_data[key] = data.data_saver.DataSaver.create_distributor_from_runtime_data(key, value)
 
 
 def browse_image(entry_field):

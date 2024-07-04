@@ -13,7 +13,6 @@ from Back_end.sales import Sales
 from Front_end.home_page import home_page
 from Front_end.new_product_page import save_product, new_product_page
 
-
 def refresh_canvas(memory, product_frame, canvas):
     print(memory)
     for widget in product_frame.winfo_children():
@@ -81,7 +80,7 @@ def products_page(memory):
     products_label = Label(root, text="Products", bd=1, font=("Arial", 24), padx=1, anchor='w')
 
     # Buttons
-    back_to_home_page = Button(root, text="<--- Home page", width=20, pady=10, command=home_page)
+    back_to_home_page = Button(root, text="<--- Home page", width=20, pady=10, command=lambda: home_page(data.data_saver.DataSaver.runtime_data, data.data_saver.DataSaver.products_runtime_data, data.data_saver.DataSaver.sales_runtime_data))
     add_product_button = Button(root, text="New Product!", width=20, padx=40, pady=10, command=new_product_page)
     refresh_list_button = Button(root, text="Refresh List!", width=20, padx=40, pady=10, command=lambda: refresh_canvas(memory, product_frame, canvas))
 

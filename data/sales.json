@@ -33,5 +33,20 @@
         "distributor": "000003",
         "product": "JHGFD441",
         "units_sold": 3
+    },
+    "1720120634": {
+        "distributor": "000005",
+        "product": "ITALIA19",
+        "units_sold": 1
+    },
+    "1720120852": {
+        "distributor": "000001",
+        "product": "5521MDAW",
+        "units_sold": 2
+    },
+    "1720121151": {
+        "distributor": "000002",
+        "product": "GMMGFF!1",
+        "units_sold": 1
     }
 }
