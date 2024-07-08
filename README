@@ -10,7 +10,7 @@ Distributor window:
 
     Here is a list of distributors stored in program. In a table you see the information about distributor.
     To add distributor you need to press "new distributor" button. At this moment it is crucial to input proper information to create new distributor.
-    Since refresh button is not working yet, after creating new distributor you need to rerun program to update the table.
+    You must press the refresh button after initializing a new distributor.
     unic code for distributor is generated automaticaly  
 
 Products page:
@@ -23,7 +23,7 @@ Sales page:
 
     In the table here you can see all the sales made by distributors.
     To add new sale a person must enter correct distributor code and product code, otherwise There will be an error.
-    Refresh button also does not work here at this moment.
+    You must press the refresh button after initializing a new sale.
 
 Bonus page:
 
